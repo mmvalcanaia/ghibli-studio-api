@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --raisin-black: #28262c;
+  --blue-bell: #998fc7;
+  --lavender-blue: #998fc7;
+  --magnolia: #f9f5ff;
+  --resolution-blue: #14248a;
+
+  --prussian-blue: #0f395cff;
+  --star-command-blue: #0573a6ff;
+  --pistachio: #8ec987ff;
+  --honeydew: #effae3ff;
+  --umber: #5f4d3fff;
+}
+
 body {
+  margin: 0;
+  margin: 0;
+  font-family: 'Poppings', sans-serif;
+  background: var(--honeydew);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }

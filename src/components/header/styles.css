@@ -1,0 +1,11 @@
+.header-container {
+  height: 120px;
+  background-color: var(--pistachio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-img {
+  height: 80px;
+}
