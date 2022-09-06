@@ -1,29 +1,23 @@
-import Header from './components/header';
 import './App.css';
-import MovieCard from './components/movie-card';
-import { useEffect, useState } from 'react';
-import { Movie } from './types';
-import Filter from './components/filter';
-import { makeRequest } from './utils/requests';
+
+import Header from 'components/header';
+import Home from 'components/pages/home';
+import MovieDetails from 'components/pages/movieDetails';
+import Footer from 'components/footer';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [movies, setMovies] = useState<Movie[]>([]);
-
-  useEffect(() => {
-    makeRequest.get<Movie[]>('/films').then((response) => {
-      setMovies(response.data);
-    });
-  }, []);
-
   return (
     <div className="app-container">
-      <Header />
-      <Filter />
-      <div className="movies-container">
-        {movies.map((movie) => {
-          return <MovieCard key={movie.id} movie={movie} />;
-        })}
-      </div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/films/:movieId" element={<MovieDetails />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

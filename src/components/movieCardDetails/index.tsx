@@ -1,11 +1,21 @@
+import { useEffect, useState } from 'react';
+import { makeRequest } from 'utils/requests';
 import { Movie } from '../../types';
 import './styles.css';
 
 type Props = {
-  movie: Movie;
+  id: string;
 };
 
-function MovieCard({ movie }: Props) {
+function MovieCardDetails({ id }: Props) {
+  const [movie, setMovie] = useState<Movie>();
+
+  useEffect(() => {
+    makeRequest.get<Movie>(`/films/${id}`).then((response) => {
+      setMovie(response.data);
+    });
+  }, []);
+
   return (
     <div className="movie-container">
       <img className="movie-banner" src={movie?.movie_banner} alt="" />
@@ -16,4 +26,4 @@ function MovieCard({ movie }: Props) {
   );
 }
 
-export default MovieCard;
+export default MovieCardDetails;

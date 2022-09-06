@@ -1,0 +1,15 @@
+.footer-container {
+  height: 80px;
+  width: 100%;
+  background-color: var(--prussian-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-info {
+  color: var(--magnolia);
+  font-size: 14px;
+}

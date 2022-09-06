@@ -16,7 +16,6 @@ function Filter() {
       );
 
       const yearArray = Array.from(yearSet);
-
       const option = yearArray.map((item) => {
         const yearFilterOption: YearFilterOption = {
           value: item,
