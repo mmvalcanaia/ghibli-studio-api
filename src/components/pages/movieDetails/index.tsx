@@ -19,7 +19,7 @@ function MovieDetails() {
   }, [movieId]);
 
   return (
-    <div>
+    <div className="movie-details-main">
       <div className="movie-details-container">
         <div className="movie-details-banner-title-container">
           <img className="movie-details-banner" src={movie?.movie_banner} alt="" />
