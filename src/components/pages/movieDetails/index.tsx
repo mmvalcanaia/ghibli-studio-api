@@ -15,7 +15,6 @@ function MovieDetails() {
   useEffect(() => {
     makeRequest.get<Movie>(`/films/${movieId}`).then((response) => {
       setMovie(response.data);
-      console.log(movieId);
     });
   }, [movieId]);
 
@@ -29,10 +28,10 @@ function MovieDetails() {
         </div>
         <div className="movie-details-info-container">
           <p className="movie-details-description base-field">{movie?.description}</p>
-          <span className="movie-details-year base-field">{movie?.release_date}</span>
-          <span className="movie-details-director base-field">{movie?.director}</span>
-          <span className="movie-details-running-time base-field">{movie?.running_time}</span>
-          <span className="movie-details-score base-field">{movie?.rt_score}</span>
+          <span className="movie-details-year base-field">Release date: {movie?.release_date}</span>
+          <span className="movie-details-director base-field">Director: {movie?.director}</span>
+          <span className="movie-details-running-time base-field">{movie?.running_time} min.</span>
+          <span className="movie-details-score base-field">Tomatometer: {movie?.rt_score}%</span>
         </div>
       </div>
     </div>

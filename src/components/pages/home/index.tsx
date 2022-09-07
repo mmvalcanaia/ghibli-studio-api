@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { Movie } from 'types';
 import { makeRequest } from 'utils/requests';
 import { Link } from 'react-router-dom';
-import Filter from 'components/filter';
 
 function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -17,7 +16,7 @@ function Home() {
 
   return (
     <>
-      <Filter />
+      {/* <Filter /> */}
       <div className="movies-container">
         {movies.map((movie) => {
           return (

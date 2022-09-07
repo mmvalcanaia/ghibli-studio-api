@@ -3,7 +3,7 @@ import './styles.css';
 function Footer() {
   return (
     <footer className="footer-container">
-      <span className="footer-info">2022 - created by mmvalcanaia</span>
+      <p>2022 - created by mmvalcanaia</p>
     </footer>
   );
 }

@@ -10,11 +10,11 @@ export type Movie = {
   release_date: number;
   running_time: number;
   rt_score: number;
-  people: People[];
+  people: string[];
 };
 
 export type People = {
-  id: number;
+  id: string;
   name: string;
   age: string;
   films: Movie[];
