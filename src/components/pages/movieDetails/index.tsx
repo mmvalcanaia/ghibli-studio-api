@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Movie } from 'types';
 import { makeRequest } from 'utils/requests';
+import { IoIosArrowRoundBack } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 type UrlParams = {
   movieId: string;
@@ -11,6 +13,7 @@ type UrlParams = {
 function MovieDetails() {
   const { movieId } = useParams<UrlParams>();
   const [movie, setMovie] = useState<Movie>();
+  // const [actors, setActors] = useState<People[]>([]);
 
   useEffect(() => {
     makeRequest.get<Movie>(`/films/${movieId}`).then((response) => {
@@ -18,8 +21,21 @@ function MovieDetails() {
     });
   }, [movieId]);
 
+  // useEffect(() => {
+  //   const listPeople: People[] = [];
+  //   movie?.people.map((actor) => {
+  //     makeRequest.get<People>(`${actor}`).then((response) => {
+  //       listPeople.push(response.data);
+  //     });
+  //     setActors(listPeople);
+  //   });
+  // }, []);
+
   return (
     <div className="movie-details-main">
+      <Link to="/">
+        <IoIosArrowRoundBack className="icon-back-arrow" />
+      </Link>
       <div className="movie-details-container">
         <div className="movie-details-banner-title-container">
           <img className="movie-details-banner" src={movie?.movie_banner} alt="" />

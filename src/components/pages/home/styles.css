@@ -1,6 +1,5 @@
 .movies-container {
   margin: 10px 0;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,3 +1,10 @@
+.icon-back-arrow {
+  height: 40px;
+  width: 40px;
+  fill: var(--pistachio);
+  margin-left: 10px;
+}
+
 .movie-details-container {
   width: 300px;
   height: fit-content;

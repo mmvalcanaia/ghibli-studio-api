@@ -1,0 +1,35 @@
+.movie-favorite-container {
+  width: 300px;
+  height: 280px;
+  background: var(--star-command-blue);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  color: var(--magnolia);
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.movie-favorite-banner {
+  width: 100%;
+}
+
+.movie-favorite-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-favorite-icon {
+  fill: var(--imperial-red);
+  height: 20px;
+  width: 20px;
+}
+
+@media (min-width: 768px) {
+  .movie-favorite-container {
+    margin: 20px;
+  }
+}

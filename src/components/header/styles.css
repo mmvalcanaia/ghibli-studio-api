@@ -6,6 +6,20 @@
   justify-content: center;
 }
 
+.logo-link-container {
+  flex-grow: 0.5;
+}
+
 .header-img {
   height: 80px;
+}
+
+.logo-favorites-container {
+  margin: 0 10px;
+}
+
+.logo-favorites-container svg {
+  height: 25px;
+  width: 25px;
+  fill: var(--imperial-red);
 }

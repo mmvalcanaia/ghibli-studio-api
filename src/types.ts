@@ -24,3 +24,7 @@ export type YearFilterOption = {
   value: number;
   label: string;
 };
+
+export type FilterData = {
+  year: number[];
+};
